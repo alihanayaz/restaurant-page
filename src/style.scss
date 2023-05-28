@@ -1,0 +1,151 @@
+@import './variables.scss';
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: $font-family;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $body-color;
+}
+
+.header {
+  background-color: $header-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0 1rem;
+        a {
+          text-decoration: none;
+          color: $body-color;
+          text-transform: uppercase;
+          font-weight: 700;
+          &:hover {
+            color: $footer-color;
+            transition: 0.1s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/banner.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+      content: 'Mexican Street Food';
+      color: $footer-color;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 0.5rem;
+      margin: 0 auto;
+      padding: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    h2 {
+      color: $footer-color;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 1rem;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+    }
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .menu-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 1rem;
+        width: 300px;
+        height: 300px;
+        background-color: $footer-color;
+        border-radius: 8px;
+        .menu-item-img {
+          width: 200px;
+          height: 200px;
+          border-radius: 8px;
+        }
+        .menu-item-text {
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: auto;
+  width: 100%;
+  height: 50px;
+  background-color: $footer-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-weight: 700;
+  }
+}
